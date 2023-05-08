@@ -1,0 +1,102 @@
+<!--
+        표(테이블) : 웹 문서에서 자료를 정리할 때 자주 사용한다.
+                    행과 열로 이루어져 있고, 행과 열이 만나는 지점을 셀이라고 한다.
+       
+        표를 만드는 기본적인 태그는 <table>, <tr>, <td>, <th>가 있다.
+            <table></table> : 기본적인 표를 생성해 주는 태그이다. 표의 시작과 끝을 나타낸다.
+            <tr></tr> : 표의 행을 나타내는 태그이다.
+            <th></th> : 표의 제목 셀을 나타내는 태그이다. (가운데 정렬, 글자 굵게)
+            <td></td> : 표의 일반 셀을 나타내는 태그이다.
+
+
+        기본적인 구조
+        <caption></caption> : 표의 제목
+        <table border = "1"> border는 표를 나타내는
+            <tr>
+                <th rowspan = "합칠 열의값">제목</th>
+                    colspan = "합칠 행의 값"
+                <th>제목</th>
+            </tr>
+            <tr>
+                <td>내용</td>
+                <td>내용</td>
+            </tr>
+            <tr>
+                <td>내용</td>
+                <td>내용</td>
+            </tr>
+        </table>
+    -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>표 만들기</title>
+</head>
+<body>
+    <h1>표의 행과 열 합치기</h1>
+    <h3>회원정보</h3>
+    <table border="10">
+        <!-- width : 넓이 지정 -->
+        <!-- height : 높이 지정 -->
+        <tr>
+            <td colspan = "2" rowspan="2" width = "250" >사진</td>
+            <td>이름</td>
+            <td width = "200" height = "150"></td>
+        </tr>
+        <tr>
+            <td width = "200" height = "150">연락처</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td width = "200" height = "150">주소</td>
+            <td colspan = "3" width = "100"></td>
+        </tr>
+        <tr>
+            <td width = "200" height = "150">자기소개</td>
+            <td colspan = "3"></td>
+        </tr>
+    </table>
+
+    <!-- 작성하는 위치에 따라 테이블 위 또는 아래에 설명을 달아줄 수 있다 -->
+    <figure>
+        <figcaption>figure를 이용해서 테이블의 설명
+            혹은 img의 설명 등에 주로 사용된다
+        </figcaption>
+        <figcaption>설명 내용을 여러 줄로 표기할 수 있다</figcaption>
+    </figure>
+    <hr>
+
+    <h3> 테이블 태그의 구조 설정</h3>
+    <table border='10'>
+        <thead>
+            <th>이름</th>
+            <th>나이</th>
+            <th>주소</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>나잘난</td>
+                <td>25살</td>
+                <td>서울</td>
+            </tr>
+            <tr>
+                <td>코카콜라</td>
+                <td>26살</td>
+                <td>펩시</td>
+            </tr>
+            <tr>
+                <td>펩시</td>
+                <td>24t살</td>
+                <td>칠성</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <td colspan='2'>총 인원</td>
+            <td>3명</td>
+        </tfoot>
+    </table>
+</body>
+</html>
