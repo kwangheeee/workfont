@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>하이퍼링크 태그</title>
+</head>
+
+<body>
+    <h1>하이퍼 링크 태그</h1>
+    <!-- 웹문서를 다른문서를 이동할 떄 사용 클릭하면 다른 곳으로 이동할 때 사용 -->
+    <!-- 하이퍼링크 기능은 웹 문서가 다른 문서와 구분되는 가장 핵심적인 기능
+        클릭을 통해 연결된 곳으로 이동하여 사용을 편리하게 해주는 기능이로
+        텍스트를 클릭해 이동하는 방법, 이미지를 클릭해 이동하는 방법등이 존재
+        또한 페이지 내에서 링크를 통한 이동도 간능 -->
+    <h3>a 태그를 이용한 하이퍼링크 테스트</h3>
+    <ul>
+        <li><a href="01글자관련태그들.html">글자관련 태그들 - 현재창</a></li>
+        <li><a href="01글자관련태그들.html" target='blank'>글자관련 태그들 - 새창에</a></li>
+        <li><a href="02목록 만들기.html">목록 만들기 태그들</a></li>
+    </ul>
+    <h3>네트워크가 연결된 상황이라면 현재 서비스되고 있는 웹페에지도 링크가 가능합니다.</h3>
+        <li><a href="https://www.naver.com/">네이버 슈슝</a></li><br>
+    <!-- <h3>이미지 태그를 이용한 링크 이동</h3> -->
+    <a href="https://www.naver.com/"><img src="file/naver.jpg" width='50'></a>
+
+    <h3 id='#top'>한 페이지 내에서 점프하는 앵커 만들기</h3>
+    <ul>
+        <li><a href="#content1">기사내용1</a> </li>
+        <li><a href="#content2">기사내용2</a> </li>
+        <li><a href="#content3">기사내용3</a> </li>
+    </ul>
+    <h4 id='content1'>기사내용1</h4>
+    <p>
+        
+        <a href="#top">위로가기</a>
+    </p>
+    <h4 id='content2'>기사내용2</h4>
+    <p>
+        
+        <a href="#top">위로가기</a>
+    </p>
+    <h4 id='content3'>기사내용3</h4>
+    <p>
+       
+        <a href="#top">위로가기</a>
+    </p>
+
+    <h1>웹 문서에 pdf 파일 삽입하기</h1>
+    <object width='800' height='700' data="06-1.JOIN.pdf" ></object>
+</body>
+
+</html>
