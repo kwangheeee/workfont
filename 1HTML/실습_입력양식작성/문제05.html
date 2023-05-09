@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <head>
+        <meta charset="utf-8">
+        <title>예약 접수</title>
+        <style>
+            ul {
+                list-style:none;
+            }
+            li {
+                line-height:50px;
+            }
+            label {
+                width:60px;
+                float:left;
+            }
+        </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예약하기</title>
+</head>
+<body>
+    <h1>예약 하기</h1>
+    <form action="실습문제5.png" method='get' target = '_blank'>
+        <dl>
+            <!-- id는 값을 가려줘 / name은 보이고 -->
+            <dd>이&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;름   <input type="text" id='name' name='name'><br><br></dd>
+            <dd>휴 대 폰   <input type="tel" id='phone' name='phone'><br><br></dd>
+            <dd>이 메 일   <input type="email" id='email' name='email'><br><br></dd>
+            <dd><input type="submit" value='예약하기'></dd>
+        </dl>
+    </form>
+    <hr>
+    <h1>예약 하기</h1>
+    <form action="실습문제5.png" method='get' >
+        <!-- 위 스타일에 none으로 해줘 ul을 써도 안보인다 -->
+        <ul>
+            <li>이&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;름   <input type="text" id='name'></li>
+            <li>휴 대 폰   <input type="text" id='phone'></li>
+            <li>이 메 일   <input type="text" id='email'></li>
+            <li><input type="submit" value='예약하기'></li>
+        </ul>
+    </form>
+</body>
+</html>
