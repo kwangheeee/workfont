@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼 관련 태그</title>
+</head>
+
+<body>
+    <h1>폼 관련 태그</h1>
+    <form action="주문은 이쪽으로.html" method='get'>
+        <label for="id">아이디 : </label><input type="text" name="name_id" id="id"><br>
+        <label for="pw">비밀번호 : </label><input type="text" name="name_pw" id="pw"><br>
+        <input type="submit" value="전송">
+        <input type="reset" value="초기화">
+    </form>
+    <br>
+
+    <form>
+        아이디 : <input type="text" name="userid" id="userid"><br>
+        비밀번호 : <input type="password" name="pw" id="pw"><br>
+        홈페이지 : <input type="url" name="url" id="url"><br>
+        검색 : <input type="search" name="search" id="search"><br>
+    </form>
+    <br>
+
+    <form>
+        아이디 : <input type="text" name="userid" id="userid" placeholder='id를 입력해 주세요.' required size='40'
+            maxlength='40'><br>
+        비밀번호 : <input type="password" name="pw" id="pw" placeholder='pw를 입력해 주세요.' required size='40'
+            maxlength='40'><br>
+        전화번호 : <input type="tel" name="num" id="num" placeholder='번호를 입력해 주세요.' max><br>
+        홈페이지 : <input type="url" name="url" id="url" value='http://'><br>
+        검색 : <input type="search" name="search" id="search" placeholder='내용을 입력해 주세요'><br>
+        색상 : <input type="text" name="myColor" list="myColor">
+        <datalist id='myColor'>
+            <option value="black">검정</option>
+            <option value="white">하얀</option>
+            <option value="blue">파랑</option>
+        </datalist>
+    </form>
+    <br>
+
+    <form>
+        구매할 수량 : <input type="number" name="amount" id="amount" value='0' min='0' max='100' step='5'><br>
+        구매할 수량 : <input type="range" name="point" id="point" min='0' max='1000' step='5' value='300'><br>
+    </form>
+    <br>
+
+    <form>
+        date : <input type="date" name="date" id="date"><br>
+        month : <input type="month" name="month" id="month"><br>
+        time : <input type="time" name="time" id="time"><br>
+        datetime-local : <input type="datetime-local" name="dtl" id="dtl"><br>
+        week : <input type="week" name="week" id="week">
+    </form>
+    <br>
+
+    <form>
+        <fieldset>
+            <legend>성별</legend>
+            <input type="radio" name="gender" id="gender" value='M'>남자
+            <input type="radio" name="gender" id="gender" value='F'>여자
+            <input type="radio" name="gender" id="gender" value='x' checked>외계인
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>취미</legend>
+            <input type="checkbox" name="hobby" id="hobby" value='baseball'>야구
+            <input type="checkbox" name="hobby" id="hobby" value='soccer'>축구
+            <input type="checkbox" name="hobby" id="hobby" value='basketball'>농구
+        </fieldset>
+    </form>
+    <br>
+
+    <form>
+        색상 : <input type="color" name="color" id="color"><br>
+        파일선택 : <input type="file" name="uploadFile" id="uploadFile" multiple><br>
+        <!-- multiple속성은 file을 다수개 선택이 가능하게 해준다 -->
+        hidden : <input type="hidden" name="hiddenValue" value='1'><br>
+        <input type="button" value="버튼 내용 표시"><br>
+        <input type="image" value='img버튼' src='1HTML/images/login.png' alt='네이버버튼'>
+    </form>
+    <br>
+
+    <form>
+        <select>
+            <optgroup label='아시아'>
+                <option value="ko" selected>한국</option>
+                <!-- selected속성은 기본값 설정 -->
+                <option value="ja">일본</option>
+                <option value="ch">중국</option>
+            </optgroup>
+            <optgroup label='그 외'>
+                <option value="am">미국</option>
+                <option value="en">영국</option>
+            </optgroup>
+            <option value="" label='기타'></option>
+        </select>
+    </form>
+    <br>
+
+    <form>
+        지원동기 <textarea name="teare" id="" cols="30" rows="10" placeholder='내용을 입력해 주세요' style='resize: black;'></textarea>   
+        <!-- cols와 rows를 통해 크기 설정이 가능하며 style로 표의 색을 지정할 수 있다. -->
+    </form>
+    <br>
+    <form>
+        progress : <progress value='30' max='100'></progress><br>
+        <!-- value를 통해 기본값을 설정하고 max로 최대값을 설정할 수 있다. -->
+        meter : <meter min='0' max='100' value='91' low='60' high='90'></meter><br>
+        <!-- min/max로 최소/최대 설정이 가능하다
+        해당값이 변할 떄 마다 low, high으로 지정한 값에 따른 막대의 색이 변하게 설정할 수 있다. -->
+    </form>
+</body>
+
+</html>

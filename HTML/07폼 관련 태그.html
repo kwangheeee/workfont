@@ -78,7 +78,7 @@
     <form>
         <!-- type ='text' 
         한줄짜리 텍스트를 입력 할 수 있는 텍스트 박스 -->
-        <li>아이디 : <input type="text" name='userid' id='userid' size='20' maxlength='5' placeholder='id를 입력해주세요' required
+        <li>아이디 : <input type="text" name='userid' id='userid' size='50' maxlength='5' placeholder='id를 입력해주세요' required
                 value='@naver.com'> </li>
 
         <!-- type='password'
@@ -104,7 +104,7 @@
 
         <!-- datalist 태그
         텍스트 필드에서 데이터 목록 중 값을 선택하여 입력 -->
-        <li>색 상 : <input type="text" name="myColor" id="myColor">
+        <li>색 상 : <input type="text" name="myColor" list="myColor">
             <datalist id='myColor'>
                 <option value="black">검정</option>
                 <option value="white">하얀</option>
@@ -204,29 +204,32 @@
             <input type="reset" value="초기화"><br>
 
             <!-- 이미지 버튼 만들기 -->
-            <input type="image" value='img버튼' src='images\login.png' alt='네이버버튼'>
+            <input type="image" value='img버튼' src='1HTML/images/login.png' alt='네이버버튼'>
 
         </form>
-
-        <h3>드롭다운목록 select</h3>
+        <br>
+        <br>
+        <br>
+        <!-- <h3>드롭다운목록 select</h3> -->
         <form action="">
             <!-- select 태그와 option태그
             사용자가 내용을 입력하는 것이 아닌
             여러 옵션중에서 선택하게 하고 싶을 떄 사용하는 드롭 다운 목록이다 -->
             <select >
                 <optgroup label='아시아'>
-                <!-- selected : 기본값 설정 -->
-                <option value="ko" selected>한국</option> 
+                    <option value="ko" selected>한국</option> 
+                    <!-- selected속성은 기본값 설정 -->
                 <option value="ja">일본</option>
                 <option value="ch">중국</option>
             </optgroup>
             <optgroup label='그 외'>
-                <option value="usa">미국</option>
+                <option value="am">미국</option>
                 <option value="en">영국</option>
             </optgroup>
             <option value="" label='기타'></option>
         </select>
-
+<br>
+<br>
         <!-- textarea태그
         input type='text'와 비슷하지만 여러 줄을 입력할 수 있따 -->
         <textarea name="teare" id="" cols="30" rows="10" placeholder='내용을 입력해 주세요' style='resize: black;'></textarea>

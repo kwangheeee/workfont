@@ -11,9 +11,9 @@
     <form action="">
         <fieldset>
             <legend>필수 입력 사항</legend>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>ID</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                 <input type="text" name="id" id="id" placeholder='아이디 10글자 이내'>
-                <button type='submit'>중복확인</button><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label for="userid"><strong>ID</strong></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 <input type="text" name="id" id="userid" placeholder='아이디 10글자 이내'>
+                <button type='button'>중복확인</button><br>
                 &nbsp;&nbsp;&nbsp;&nbsp;<strong>비밀번호</strong>&nbsp;&nbsp;&nbsp;
                 <input type="number" name="pw" id="pw" placeholder='영문, 숫자, 특수문자 포함 8자 이상'><br>
                 <strong>비밀번호 확인</strong> <input type="number" name="pw" id="pw"><br>
@@ -24,6 +24,37 @@
                     <option value="naver.com">naver.com</option>
                     <option value="gmail.com">gmail.com</option>
                 </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>필수 입력 사항</legend>
+                <table>
+                    <tr>
+                        <td><label for="userid"><b>ID</b></label></td>
+                        <td><input type="text" name="id" id="userid" placeholder='id를 입력해 주세요'></td>
+                        <td><input type="button" value="중복확인"></td>
+                    </tr>
+                    <br>
+                    <tr>
+                        <td><label for="userpw"><b>비밀번호</b></label></td>
+                        <td><input type="password" name="pw" id="userpw" placeholder='영문, 숫자, 특수문자 포함 8자 이상'></td>
+                    </tr>
+                    <br>
+                    <tr>
+                        <td><label for="checkpw"><b>비밀번호 확인</b></label></td>
+                        <td><input type="password" name="checkpw" id="pw"></td>
+                    </tr>
+                    <br>
+                    <tr>
+                        <td><label for="useremail"><b>Email</b></label></td>
+                        <td><input type="email" name="email" id="useremail"></td>
+                        <td><select name="@mail" id="writeemail">
+                            <option value="">직접입력</option>
+                            <option value="writeemail">naver.com</option>
+                            <option value="writeemail">gmail.com</option>
+                        </select></td>
+                    </tr>
+                </table>
             </fieldset>
 
             <fieldset>
@@ -38,10 +69,10 @@
                 <br>
                 <p>
                 취미 : <br>
-                <input type="checkbox" name="hobby" id="baseball">야구 
-                <input type="checkbox" name="hobby" id="basketball">농구 
+                <input type="checkbox" name="hobby" id="hobby1" value='baseball'><label for="baseball">야구</label>  
+                <input type="checkbox" name="hobby" id="hobby2" value='basketball'><label for="basketball">농구</label>
                 <input type="checkbox" name="hobby" id="soccer">축구<br>
-                <input type="checkbox" name="hobby" id="study" checked>공부
+                <label><input type="checkbox" name="hobby" id="hobby4" value='study' checked>공부</label>
                 <input type="checkbox" name="hobby" id="music">음악감상<br>
                 <input type="checkbox" name="etc" id="기타">기타 : <input type="text" name="etc" id="etc">
                 </p>
@@ -51,9 +82,12 @@
                 <textarea name="info" id="info" cols="50" rows="10"></textarea>
             </fieldset>
             <br>
-            <input type="submit" value="회원가입">
-            <input type="reset" value="다시입력">
-            <input type="submit" value="이전으로">
+            <p>
+                <input type="submit" value="회원가입">
+                <input type="reset" value="다시입력">
+                <input type="button" value="이전으로">
+            </p>
     </form>
 </body>
 </html>
+

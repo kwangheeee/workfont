@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 텍스트 스타일</title>
+    <!-- 내부스타일 -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
+        
+        #ff1{
+            font-family: "궁서체";
+        }
+        #ff2{
+            font-family: "굴림체";
+        }
+        
+        /* 글꼴이 없는 경우를 대비해서 */
+        /* ,를 이용해서 여러 글꼴을 나열할 수 있음 */
+        #ff3{
+            font-family: "없는글꼴", "궁서>o<","고딕";
+        }
+        
+        #ff4{
+            font-family: 'Dongle', sans-serif;
+            font-size: xx-large;
+        }
+        
+        *{
+            font-family: 'Dongle', sans-serif;
+        }
+        
+        #size1{
+            font-size: 10px;
+        }
+        #size2{
+            font-size: 10em;
+        }
+        #size3{
+            font-size: 10%;
+        }
+        
+        li{
+            padding: 10px;
+            border: 1px dotted;
+        }
+    </style>
+    <link rel="stylesheet" href="03.css">
+</head>
+<body>
+    <h1>텍스트 스타일</h1>
+
+    <h2>font-family</h2>
+    텍스트의 글꼴을 지정할때 사용
+
+    <p style='font-family: "궁서체";'>글꼴변경 테스트1</p>
+    <p style='font-family: "굴림체";'>글꼴변경 테스트2</p>
+    <p style='font-family: "없는글꼴", "궁서>o<","고딕";'>글꼴변경 테스트3</p>
+    <p style='font-family: "Dongle", sans-serif;'>글꼴변경 테스트4</p>
+
+    <p>
+        웹 폰트 사용
+        <br><a href="http://fonts.google.com/">구글웹 폰트</a>
+        <br>style태그안에 @import한 후 사용가능
+    </p>
+
+    <h2>font-size</h2>
+    <ul>
+        <li style='font-size: 30px;'>px</li>
+        <li style='font-size: 30em;'>em </li>
+        <li style='font-size: 30%;'>%</li>
+    </ul>
+    <br>
+    <h2>font-weight</h2>
+    텍스트의 두꼐를 변경할 떄 사용
+    <ul>
+        <li>원래굵기</li>
+        <li style='font-weight: bold;'>굴은 글꼴</li>
+        <li style='font-weight: lighter;'>가늘게</li>
+        <li style='font-weight: bolder;'>굵게</li>
+    </ul>
+    <br>
+
+    <h2>font-variant</h2>
+    <ul>
+        <!-- 바꾸지 않는다 -->
+        <li style='font-variant: normal;'>I LOVE YOU</li> 
+        <!-- 소문자를 대문자로 바꾼다 -->
+        <li style='font-variant: small-caps;'>i love you</li>
+    </ul>
+    <br>
+
+    <h2>font-style</h2>
+    텍스트의 기울임을 지정할 때 사용
+    <ul>
+        <li>일반</li>
+        <li style='font-style: italic;'>italic 기울임</li>
+        <li style='font-style: oblique;'>oblique 스타일</li>
+    </ul>
+
+    <h2>color</h2>
+    글자의 색상을 지정
+    <ul>
+        <!-- 이름으로 지정
+        웹 안전 색상
+        모든 웹브라우저에서 표현할 수 있는 색상
+        16가지 기본색상을 포함 - 216가지 -->
+        <li style='color: red;''>색상명으로 지정</li>
+        <!-- #과 16진수 6자리를 합쳐서 색상을 표현
+        앞에서 부터 2자리씩 묶어 빨강, 초록, 파랑 색상의 양을 표시
+        (중복된 숫자인 경우 3자리로 표현 가능 #000000 -> #000) -->
+        <li style='color: #fa0505;'>16진수 값으로 지정</li>
+        <li style='color: rgb(255, 0, 0);'>rgb로 설정</li>
+            <!-- 뒤에 a가 들어가는 것은 투명도를 나타낸 것이다 -->
+        <li style='color: rgba(255, 0, 0, 0.192);'>rgba로 설정</li>
+        <li style='color: hsl(0, 100%, 50%);'>hsl로 설정</li>
+        <li style='color: hsla(0, 100%, 50%, 0.219);'>hsla로 설정</li>
+    </ul>
+
+    <h2>text-decoration</h2>
+    텍스트에 줄을 긋을때 사용
+    <ul>
+        <li>일반</li>
+        <li style='text-decoration:overline ;'>위에 줄긋기</li>
+        <li style='text-decoration:line-through ;'>중간에 줄긋기</li>
+        <li style='text-decoration:underline ;'>아래에 줄긋기</li>
+        <!-- <li><a href="css기본.html" >test링크</a></li>
+        <li><a href="css기본.html" style='text-decoration: none; color: black; font-size: 1.5rem;'>test링크</a></li> -->
+    </ul>
+    <br>
+
+    <h2>text-shadow</h2>
+    텍스트에 그림자 효과를 추가<br>
+    text-shadow : 가로거리 + 세로거리 + 번짐정도 + 색상<br>
+    양수 글자의 오른쪽, 아래쪽 <br>
+    음수 글자의 왼쪽<br>
+    번짐정도 : 양수값 그림자가 모든 방향으로 퍼져 나가므로 크게 표현<br>
+    <ul>
+        <li style='text-shadow :10px; font-size: xx-large;'>text-shadow 가로거리</li>
+        <li style='text-shadow:3px 3px; font-size: xx-large;'>text-shadow 가로거리 세로거리</li>
+        <li style='text-shadow:3px 3px 3px; font-size: xx-large;'>text-shadow 가로거리 세로거리 번짐정도</li>
+        <li style='text-shadow:3px 3px 3px sienna; font-size: xx-large; background-color: aliceblue'>가로거리 세로거리 번짐정도 text-shadow 색상</li>
+    </ul>
+    <br>
+
+    <h2>text-transform</h2>
+    <ul>
+        <li style='text-transform:none ;'>none</li>
+        <li style='text-transform:capitalize ;'>capticalize</li>
+        <li style='text-transform:uppercase ;'>uppercase</li>
+        <li style='text-transform:lowercase ;'>LOWERCASE</li>
+    </ul>
+    <p style='display: block;'>aaa</p>
+</body>
+</html>

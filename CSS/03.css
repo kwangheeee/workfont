@@ -1,0 +1,39 @@
+/* 외부 글꼴 사용하기 */
+@import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
+        
+#ff1{
+    font-family: "궁서체";
+}
+#ff2{
+    font-family: "굴림체";
+}
+
+/* 글꼴이 없는 경우를 대비해서 */
+/* ,를 이용해서 여러 글꼴을 나열할 수 있음 */
+#ff3{
+    font-family: "없는글꼴", "궁서>o<","고딕";
+}
+
+#ff4{
+    font-family: 'Dongle', sans-serif;
+    font-size: xx-large;
+}
+
+*{
+    font-family: 'Dongle', sans-serif;
+}
+
+#size1{
+    font-size: 30px;
+}
+#size2{
+    font-size: 2em;
+}
+#size3{
+    font-size: 150%;
+}
+
+li{
+    padding: 10px;
+    border: 1px dotted;
+}
