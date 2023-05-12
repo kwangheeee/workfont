@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 스타일</title>
+    <style>
+        .line{
+            width: 10px;
+            display: inline-block;
+        }
+    </style>
+    <link rel="stylesheet" href="04.css">
+</head>
+<body>
+    <h1>레이아웃 스타일</h1>
+    <h2>기본 스타일</h2>
+    <h3>width, height</h3>
+    <div style='border: solid rebeccapurple; width: 200px; height: 200px; '>
+        width에서 px는 고정길이로 웹 화면이 작아져도 크기는 고정된다.
+         %는 가변길이로 웹페이지 크기에 따라 크기가 달라진다.
+
+    </div>
+    <br>
+    <div style='border: solid violet; width: 50%; height: 200px; line-height: 30px;'>
+        %로 크기를 주는 것은 가변길이로 주는 것이다
+    </div>
+
+    <h2>화면의 배치 방법 변경</h2>
+    블럭요소, 인라인 블럭 요소, 인라인 요소
+    콘텐츠가 들어있지 않으면 높이는 0으로 처리
+
+    display : 상자의 크기, 테두리 지정 <br>
+    display-inline : display속성을 inline속성으로 변경 <br>
+    display-inline-block : dispaly속성을 inline-block 속성으로 변경 <br>
+    <br>
+    <div class='border'></div>
+    <div class='display'>일반</div>
+    <br>
+    <div class='display display-block area1'>display display-block area1</div>
+    <br>
+    <div class='display display-inline area2'>display display-inline area2</div>
+    
+    <br> <br> <br>
+
+    inline : 크기를 지정할 수 없다. <br>
+    컨텐츠가 가진 크기만큼 영역을 차지 <br>
+    <br>
+    <hr>
+    <div class='display display-inline area1'>1번째</div>
+    <div class='display display-inline area1'>1번째</div>
+    <div class='display display-inline area1'>1번째</div>
+    <div class='display display-inline area1'>1번째</div>
+    <div class='display display-inline area1'>1번째</div>
+    <div class='display display-inline area1'>1번째</div>
+    <hr>
+    
+    <br> <br> <br>
+
+    inline-block : 한줄에 여러요소를 나열할 수 있다. <br>
+    크기를 지정할 수 있다. <br>
+    <div class='display display-block area2'>1번째</div>
+    <div class='display display-block area2'>1번째</div>
+    <div class='display display-block area2'>1번째</div>
+    <div class='display display-block area2'>1번째</div>
+    <div class='display display-block area2'>1번째</div>
+    <div class='display display-block area2'>1번째</div>
+
+    <h2>테두리 스타일</h2>
+    border-style <br>
+    테두리의 스타일 지정 <br><br>
+    <div class='line' style='border-style: none red;'>a</div>
+    <div class='line' style='border-style: hidden red; '>a</div>
+    <div class='line' style='border: solid red ;'>a</div>
+    <div class='line' style='border: dotted red ;'>a</div>
+    <div class='line' style='border: dashed red;'>a</div>
+    <div class='line' style='border: double red;'>a</div>
+    <div class='line' style='border: inset red;'>a</div>
+    <div class='line' style='border: outset red;'>a</div>
+    <div class='line' style='border: ridge red;'>a</div> 
+    <br><br><br>
+    border-width <br>
+    테두리 두께 지정 <br>
+    <div style='border: solid red ; border-width: 10px;'>a</div>
+    <div style='border: solid red ; border-width: thick thin;'>a</div>
+    <div style='border: solid red ; border-width: thick thin thin;'>a</div>
+    <div style='border: solid red ; border-width: 10px 5px 5px 10px;'>a</div>
+    <br><br><br>
+
+    <h4>테두리 둥굴게</h4>
+    <div style='border-top-left-radius:25px;
+     border-top-right-radius: 25px;
+     border-bottom-left-radius:25px;
+     border-bottom-right-radius: 25px;
+     border: solid black ; width: 50px ; height: 100px;'>aaaaaa</div><br>
+
+    <h4>margin</h4>
+    여백을 조절하는 속성(요소의 주변 공간) <br>
+    margin을 이용하여 요소와 요소간 간격을 조절 할 수 있다. <br>
+    요소가 세로로 배치될 경우 margin의 중첩현상이 발생하여 마진이 큰쪽으로 겹쳐짐
+    <div style='width: 100px; height: 100px; border: solid;'></div>
+    <div style='width: 100px; height: 100px; border: solid; margin: 50px;'></div>
+    <div style='width: 100px; height: 100px; border: solid; margin: 50px 100px;'></div>
+    <!-- 상 하 좌 우 -->
+    <!-- 마진 중첩현상 : 요소를 세로로 배치할 경우 마진이 큰쪽으로 겹쳐짐 -->
+    <div style='width: 100px; height: 100px; border: solid; margin: 50px 100px 100px;'></div>
+    <!-- margin속성을 이용해 가운데 정렬 
+    요소의 너비가 지정 되어있어야함
+    왼쪽마진과 오른쪽 마진을 auto로 지정 -->
+    <div style='width: 100px; height: 100px; border: solid; margin: 0px auto;'></div><br>
+
+    <h3>padding</h3>
+    테두리와 콘텐츠 사이의 영역
+    <!-- 상하좌우 모두 30px이 들어가게 된다 -->
+    <div class='size' style='padding: 30px; border: solid;'></div>
+    <div class='size' style='padding: 30px 50px 100px 50px; border: solid;'></div>
+    <div class='size' style='padding-top: 30px; padding-bottom: 100px; padding-right: 50px; padding-left: 50px; border: solid;'></div>
+
+    <h3>box-shadow</h3>
+    박스 그림자 넣기 <br>
+    <!-- 수평거리 / 수직거리 / 흐림정도 / 번짐정도 / 색상 -->
+    inset을 줄 경우 그림자가 안으로 표현
+    <br><br>
+
+    <div class='size' style='box-shadow: 10px darkgray;' ></div>    
+    <div class='size' style='box-shadow: 10px 20px darkgray;' ></div>    
+    <div class='size' style='box-shadow: 10px 20px 30px darkgray;' ></div>    
+    <div class='size' style='box-shadow: 10px 20px 30px 40px darkgray;' ></div>    
+    <div class='size' style='box-shadow: inset 20px 30px 40px darkgray;' ></div>
+        
+    
+</body>
+</html>

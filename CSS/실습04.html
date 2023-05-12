@@ -6,20 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>가정용 꿀사과</title>
     <style>
-        #img{
-            padding: 10px 10px;
-        }
-        #subtext{
-            background-color: slategrey;
-            text-align: left;
-            padding: 0px 10px; 
-        }
-        #appletitle{
-            color: aliceblue;
-            
-        }
-        #appleinfo{
-            color: yellow;
+        *{
+            margin: auto;
         }
         div{
             font-weight: bolder;
@@ -46,23 +34,39 @@
             font-weight: lighter;
         }
         #apple{
+            padding: 0px;
             margin: -10px;
             width: 540px;
             
         }
+        .imgbox{
+            background-image: url(../frontEx/2CSS/images/apple-bg.jpg);
+            width: 520px;
+            height: 400px;
+            position: relative;
+        }
+        .imgtext{
+            background-color: rgba(0, 0, 0, 0.377);
+            color: coral;
+            
+            position: absolute;
+            bottom: 0px;
+            width: 510px;
+        }
     </style>
 </head>
 <body>
-    <div >
-        <div id='img'><img src="../file/apple.png" alt="애뽈" id='apple'></div>
-        <div id='subtext'>
-            <h2 id='appletitle'>가정용 꿀사과</h2> 
-            <p id='appleinfo'>
-                흠집이 있고 약간은 못생겼지만 맛과 영양은 그대로입니다. <br>
-                질좋은 사과를 저렴하게 즐겨보세요
+    <div class='imgbox'>
+        <div class='imgtext'>
+            <h2 style='color: aliceblue; padding: 15px; text-align: left; font-size: xx-large;'>가정용 꿀사과</h2>
+            <p style='text-align: left; margin: 10px;'>
+                사과 같은 내얼굴~ <br>
+                이쁘기도 하지요~ 
             </p>
         </div>
-    
+    </div>
+    <div>
+        <img src="../frontEx/2CSS/images/top.jpg" alt="애뽈" id='apple'>
     </div>
     <div id='t1'>
             확인하세요

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <style>
+        p{
+            width: 500px;
+            height: 300px;
+            background-color: aliceblue;
+            border: 1px solid gray;
+            overflow: hidden;
+        }
+        #static{
+            /* 기본값 */
+            position: static;
+        }
+        #relative1{
+            position: relative;
+        }
+        #relative2{
+            position: relative;
+            /* 왼쪽에서 100px떨어지게 */
+            left: 100px;
+            /* 위에서 -50px떨어지게(음수 위로 이동) */
+            top: -50px;
+        }
+        #fixed{
+            position: fixed;
+            width: 300px;
+            height: 100px;
+            background-color: black;
+            /* 오른쪽에서 30px 떨어지게 */
+            right: 30px;
+            /* 위에서 30px 떨어지 */
+            top: 30px;
+            color: aliceblue;
+        }
+        #outer{
+            position: relative;
+            background-color: yellow;
+            width: 800px;
+            height: 500px;
+        }
+        #first{
+            width: 300px;
+            height: 300px;
+            background-color: blue;
+            color: aliceblue;
+            
+        }
+        #second{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            color: aliceblue;
+            position: absolute;
+            top: 100px;
+            left: 50px;
+        }
+        #third{
+            width: 100px;
+            height: 100px;
+            background-color: bisque;
+            color: aliceblue;
+            position: absolute;
+            top: 150px;
+            left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h2>포지셔닝</h2>
+    css를 이용해서 여러 요소를 적절하게 배치하는 것
+    <p id='static'>
+        Proident magna veniam labore anim irure nulla minim. Et mollit velit tempor laborum sunt in fugiat quis reprehenderit. Sunt cillum deserunt labore enim commodo do velit.
+        Consequat exercitation adipisicing ipsum tempor consequat exercitation. Dolor dolore exercitation ex culpa esse dolore incididunt proident cupidatat eu mollit enim. Eiusmod incididunt sunt dolor esse tempor Lorem adipisicing nulla eu minim incididunt occaecat.
+    </p>
+    <p id='relative1'>
+        Proident magna veniam labore anim irure nulla minim. Et mollit velit tempor laborum sunt in fugiat quis reprehenderit. Sunt cillum deserunt labore enim commodo do velit.
+        Consequat exercitation adipisicing ipsum tempor consequat exercitation. Dolor dolore exercitation ex culpa esse dolore incididunt proident cupidatat eu mollit enim. Eiusmod incididunt sunt dolor esse tempor Lorem adipisicing nulla eu minim incididunt occaecat.
+    </p>
+    <p id='relative2'>
+        Proident magna veniam labore anim irure nulla minim. Et mollit velit tempor laborum sunt in fugiat quis reprehenderit. Sunt cillum deserunt labore enim commodo do velit.
+        Consequat exercitation adipisicing ipsum tempor consequat exercitation. Dolor dolore exercitation ex culpa esse dolore incididunt proident cupidatat eu mollit enim. Eiusmod incididunt sunt dolor esse tempor Lorem adipisicing nulla eu minim incididunt occaecat.
+    </p>
+    <p id='fixed'>
+        Proident magna veniam labore anim irure nulla minim. Et mollit velit tempor laborum sunt in fugiat quis reprehenderit. Sunt cillum deserunt labore enim commodo do velit.
+        Consequat exercitation adipisicing ipsum tempor consequat exercitation. Dolor dolore exercitation ex culpa esse dolore incididunt proident cupidatat eu mollit enim. Eiusmod incididunt sunt dolor esse tempor Lorem adipisicing nulla eu minim incididunt occaecat.
+    </p>
+    <div id='outer'>
+        <p id='first'>
+            Proident magna veniam labore anim irure nulla minim. Et mollit velit tempor laborum sunt in fugiat quis reprehenderit. Sunt cillum deserunt labore enim commodo do velit.
+        </p>
+        <p id='second'>
+            Proident magna veniam labore anim irure nulla minim. Et mollit velit tempor laborum sunt in fugiat quis reprehenderit. Sunt cillum deserunt labore enim commodo do velit.
+        </p>
+        <p id='third'>
+            Proident magna veniam labore anim irure nulla minim. Et mollit velit tempor laborum sunt in fugiat quis reprehenderit. Sunt cillum deserunt labore enim commodo do velit.
+        </p>
+    </div>
+</body>
+</html>
