@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메뉴</title>
+    <style>
+        ul{
+            list-style: none;
+        }
+        li{
+            float: left;
+            width: 100px;
+            height: 50px;
+            /* border-left: 1px solid rebeccapurple; */
+            display: inline;
+        }
+        a{
+            display: inline-block;
+            /* 블럭처럼 크기를 지정하기 위해 inline-block으로 변경 */
+            width: 100px;
+            height: 50px;
+            /* height과 동일한 값을 주어 세로 정렬 */
+            line-height: 50px;
+            /* 가로정렬 */
+            text-align: center;
+            /* a요소의 브라우저 기본 스타일 제거 */
+            /* border: 1px solid pink; */
+            color: bisque;
+            font-weight: 800;
+            border-left: 1px solid pink;
+       
+        
+        }
+        a:hover{
+            color:aliceblue;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="">클릭1</a></li>
+        <li><a href="">클릭1</a></li>
+        <li><a href="">클릭1</a></li>
+        <li><a href="">클릭1</a></li>
+    </ul>
+</body>
+</html>
