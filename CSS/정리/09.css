@@ -1,0 +1,93 @@
+/* ,를 이용하여 선택자를 나열하면 같은 스타일을 지정 */
+#actionTest, #hovorTest{
+    width: 100px;
+    height: 100px;
+    background-color: greenyellow;
+}
+
+/* 사용자가 요소를 클릭하면 색상을 변경 */
+#actionTest:active{
+    background-color: green;
+}
+#hovorTest:hover{
+    background-color: green;
+}
+/* 체크박스가 체크되면 */
+input[type=checkbox]:checked{
+    width: 20px;
+    height: 20px;
+}
+/* 체크박스가 체크되면 형제요소 라벨을 선택 */
+input[type=checkbox]:checked+label{
+    font-size: 1.5em;
+}
+
+#userId:focus, #userpw:focus{
+    background-color: darkgray;
+}
+
+option:enabled{
+    background-color: olive;
+}
+option:disabled{
+    background-color: pink;
+}
+
+button:disabled{
+    background-color: darkslategray;
+}
+
+/* 형제 관계중 첫번째 요소를 선택 */
+#test2 p:first-child{
+    background-color: royalblue;
+    color: aliceblue;
+}
+
+/* 형제 관계중 마지막 요소를 선택 */
+/* p형제 중에서 마지막 요소만을 선택해 변경한다 다른 태그가 오면 적용 x */
+#test2 p:last-child{
+    background-color: darkorange;
+    color: aliceblue;
+}
+
+/* 형제 관계중 선택적 요소를 선택 */
+#test2 p:nth-child(3){
+    background-color: brown;
+    color: aliceblue;
+}
+
+/* 짝수 : even, 2n  / 홀수 : odd, 3n */
+#test2 p:nth-child(even){
+    background-color: skyblue;
+    color: aliceblue;
+}
+
+/* 뒤에서 n번째 선택 */
+#test2 p:nth-last-child(4){
+    font-size: xx-small;
+}
+
+#test3 p:first-of-type{
+    background-color: red;
+}
+
+/* 이 또한 마지막에 다른 태그가 있을 경우 적용이 안된다 */
+#test3 p:last-of-type{
+    background-color: blueviolet;
+}
+
+#test3 p:nth-of-type(2n){
+    background-color: blue;
+}
+
+#test3 p:nth-of-type(3){
+    background-color: bisque;
+}
+
+/* 부정선택 연산자 */
+    /* 짝수가 아닌것 */
+/* #test4 p:not(:nth-child(even)){ */
+    /* p요소 중에서 짝수가 아닌것 */
+#test4 p:not(:nth-of-type(even)){
+    background-color: chartreuse;
+}

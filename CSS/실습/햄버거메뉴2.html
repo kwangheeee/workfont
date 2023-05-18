@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>햄버거 메뉴</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+        /* 아이콘 크기 설정 */
+        .icon{
+            width: 70px;
+            height: 70px;
+            background-color: darkgray;
+            position: relative;
+        }
+        /* 아이콘 안의 바 크기 / 모형 설정 */
+        .icon p{
+            width: 100%;
+            height: 15px;
+            background-color: gray;
+            border-radius: 25px;
+            position: absolute;
+        }
+        /* 가운데 바 설정 */      
+        .icon p:first-child{
+            /* 바의 위의 선 기준 아이콘의 절반의 바가 위치
+                -> 이렇게 되면 중간이 아니게 된다 */
+            top: 50%;
+            /* 바의 크기의 절반을 Y축으로 이동을 통해
+                바를 가운대로 맞춤 */
+            transform: translateY(-50%);
+        }
+        /* 세워진 가운데 바 설정 */
+        .icon p:last-child{
+            transform: translateY(180%) rotate(90deg);
+        }
+
+        /* 아이콘에 마우스 올려두면 X모양으로 바뀌게 설정 */
+        .icon:hover p:first-child{
+            top: 50%;
+            transform: translateY(-50%) rotate(45deg);
+        }
+        .icon:hover p:last-child{
+            top: 50%;
+            transform: translateY(-50%) rotate(-45deg);
+        }
+
+        /* ----------메뉴---------- */
+        nav{
+            width: 70px;
+            height: 200px;
+            background-color: gainsboro;
+            position: absolute;
+            /* 메뉴를 안보이게 설정 */
+            left: -70px;
+            /* 메뉴가 보일 떄 0.5초 동안 움직임 */
+            transition: 0.5s;
+        }
+        nav ul li{
+            width: 100%;
+            height: 25%;
+            border-left: 3px solid rgba(0, 0, 0, 0.616);
+            line-height: 49px;
+            list-style: none;
+            text-decoration: none;
+        }
+        nav ul li a{
+            display: inline-block;
+            width: 100%;
+            height: 25%;
+            text-align: center;
+            font-size: small;
+            font-weight: bold;
+        }
+        /* 메뉴에 마우스 올릴 때 설정 */
+        nav ul li a:hover{
+            background-color: aliceblue;
+        }
+        /* 위에 안보이게 설정한 것을 아이콘에 마우스를 올려두면
+            보이게끔 설정 */
+        .left_icon:hover nav{
+            left: 0px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class='left_icon'>
+            <div class='icon'>
+                <p></p>
+                <p></p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="">세트메뉴</a></li>
+                    <li><a href="">단품메뉴</a></li>
+                    <li><a href="">디저트</a></li>
+                    <li><a href="">음료</a></li>
+                </ul>
+            </nav>
+        </div>
+        </header>
+</body>
+</html>

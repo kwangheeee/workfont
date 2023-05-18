@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가로 드롭다운 메뉴 만들기</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+            text-decoration: none;
+            color: black;
+            box-sizing: border-box;
+        }
+        nav .menu ul{
+            /* 부모 영역을 벗어나면 숨김처리 */
+            /* overflow: hidden; */
+        }
+        .submenu{
+            overflow: hidden;
+        }
+
+        nav .menu li{
+            width: 200px;
+            /* 하위 메뉴가 겹쳐 높이를 빼준다 */
+            /* height: 30px; */
+            /* 앞에 흰부분이 싫을경우 여기에 두면 된다 */
+            background-color: blue;
+            position: relative;
+            /* --------------------------------------세로 메뉴와 다른점 -------------------------------- */
+            float: left;
+        }
+        nav .menu li a{
+            /* 인라인요소이므로 크기를 지정하기 위해 속성을 변경 */
+            display: inline-block;
+            width: 100%;
+            line-height: 30px;
+            font-size: 1.2em;
+            font-weight: 800;
+            padding: 20px;
+            background-color: aqua;
+            text-align: center;
+        }
+        nav .menu li a:hover{
+            background-color: cornflowerblue;
+            color: aliceblue;
+        }
+        /* 서브메뉴 보이게 */
+        /* 형제 요소 선택 
+            우선순위에 의해 인라인스타일 > id스타일 > 클래스스타일 > 태그스타일
+        */
+        /* 밑에 nav .menu가 없으면 nav .menu li가 없어도 된다 */
+        nav .menu li a:hover + .submenu, nav .menu li .submenu:hover{
+            /* display, height를 block으로 할 경우 transition이 실행 안됨 */
+            /* display: block; */
+            /* height: 200px; */
+            max-height: 500px;
+        }
+        nav .menu li a:hover span{
+            transform: rotate(45deg);
+        }
+
+        nav .menu .submenu li{
+            padding-left: 20px;
+
+        }
+        nav .menu .submenu li a{
+            font-size: 1em;
+            font-family: 700;
+        }
+        /* nav .menu가 없어도 된다 */
+        nav .menu .submenu{
+            /* 화면에서 숨김 */
+            /* display: none; */
+            /* height: 0px; */
+            max-height: 0px;
+            /* 화면에서 보임 */
+            /* display: block; */
+            /* 천천히 나오도록 */
+            transition: 1s;
+        }
+        .menu li a span{
+            /* li태그에 relative속성을 줘서 그 기준으로 포지션 설정*/
+            position: absolute;
+            right: 10px;
+            color: aliceblue;
+            transition: 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <!-- 헤더영역 -->
+    <header>
+        <!-- 네비게이션 영역 -->
+        <nav>
+            <ul class='menu'>
+                <li><a href="#">메뉴1</a></li>
+                <li>
+                    <a href="#">메뉴2<span>+</span></a>
+                    <ul class='submenu'>
+                        <li><a href="#">서브메뉴1</a></li>
+                        <li><a href="#">서브메뉴2</a></li>
+                        <li><a href="#">서브메뉴3</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">메뉴3<span>+</span></a>
+                    <ul class='submenu'>
+                        <li><a href="#">서브메뉴1</a></li>
+                        <li><a href="#">서브메뉴2</a></li>
+                        <li><a href="#">서브메뉴3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">메뉴4</a></li>
+                <li><a href="#">메뉴5</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>

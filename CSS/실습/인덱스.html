@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>INSPIRATIONAL QUOTES</title>
+    <!-- <link rel="stylesheet" href="인덱스.css"> -->
+    <style>
+        *{
+            margin: 0px auto;
+            box-sizing: border-box;
+            background-color: aqua;
+        }
+        #container{
+            width: 400px;
+            height: 920px;
+        }
+        .card{
+            width: 400px;
+            height: 300px;
+            margin-top: 10px;
+            border: 1px solid black;
+        }
+        .card img{
+            width: 100%;
+            height: 200px;
+        }
+        .card .words{
+            width: 100%;
+            height: 90px;
+            text-align: center;
+            padding-top: 10px;
+        }
+        @media screen and (min-width:768px) and (max-width:1719px){
+            #container{
+            width: 1000px;
+            height: 320px;
+            position: relative;
+        }
+        .card{
+            width: 1000px;
+            height: 100%;
+            border: 1px solid black;
+        }
+        .card img{
+            width: 60%;
+            height: 100%;
+            float: left;
+        }
+        .card .words{
+            width: 40%;
+            height: 100%;
+            float: right;
+            padding-top: 50px;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="card">
+            <img src="/file/jyp.jpg">
+            <div class="words">
+                <h2>일 분 전만큼 먼 시간은 없다.</h2>
+                <h3>- Jim Bishop</h3>
+            </div>
+        </div>
+        <div class="card">
+            <img src="/file/jyp.jpg">
+            <div class="words">
+                <h2>웃음은 마음의 조깅이다.</h2>
+                <h3>- Norman Cousins</h3>
+            </div>
+        </div>
+        <div class="card">
+            <img src="/file/jyp.jpg">
+            <div class="words">
+                <h2>낡은 옷은 그냥 입고 새 책을 사라.</h2>
+                <h3>- Austin Phelps</h3>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

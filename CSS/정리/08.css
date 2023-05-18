@@ -1,0 +1,48 @@
+/* section태그 안에 있는 모든 h1 태그 스타일 설정*/
+section h1 {
+    background-color: black;
+    color: white;
+}
+
+section>p {
+    font-size: 1.2em;
+    font-weight: 700;
+}
+/* 자식선택자 */
+#div-test + div{
+    background-color: aqua;
+}
+/* 입전선택자 */
+#div-test ~ div{
+    color:  blue;
+    font-size: x-large;
+}
+#room + p{
+    background-color: chartreuse;
+}
+/* 속성선택자
+선택자[속성] */
+/* id 속성을 가진 요소를 선택 */
+.div-class[id]{
+    border: 1px solid black;
+}
+.div-class[id=name1]{
+    background-color: pink;
+}
+/* div 중에 class 속성에서 class로 시작되는 태그 */
+div[class ^= class]{
+    text-align: center;
+}
+/* div 중에 class 속성이 name을 포함하는 태그 */
+div[id *= name]{
+    background-color: coral;
+}
+/* div 중에 class 속성에서 class로 시작되는 태그 */
+div[class $= class]{
+    font-style: italic;
+}
+/* class속성의 값에 p20이 포함되어 있는 경우 */
+/* (속성값이 띄어쓰기로 구분) */
+div[class ~= p20]{
+    padding: 40px;
+}

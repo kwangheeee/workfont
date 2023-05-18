@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 기본 배경 이미지 지정 */
+        body{
+            background: url(/file/jyp.jpg) no-repeat;
+            background-size: cover;
+        }
+        /* 가로 1024px 이하이면 */
+        @media screen and (max-width:1024px){
+            body{
+                background: url(/file/apple.png) no-repeat;
+            background-size: cover;
+
+            }
+        }
+        /* 가로 768px 이하이면 */
+        @media screen and (max-width:768px){
+            body{
+                background: url(/1HTML/images/salad.jpg) no-repeat;
+                background-size: cover;
+            }
+        }
+        /* 가로 320px 이하이면 */
+        @media screen and (max-width:320px){
+            body{
+                background: url(/1HTML/images/tangerines.jpg) no-repeat;
+                background-size: cover;
+            }
+        }
+            
+        
+    </style>
+</head>
+<body>
+    <h1>Media Query</h1>
+</body>
+</html>
